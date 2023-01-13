@@ -12,9 +12,10 @@ from sklearn.linear_model import LinearRegression
 
 # Ornstein-Uhlenbeck process is not just stationary but also normally distributed
 # ou parameter : dXt = mu(theta - Xt)dt + sigma * dBt
-#      - Bt : Brownian Motion
-#      - mu : deterministic part & the drift of the process 
+#      - Bt : standard Brownian motion under the probability measure P
+#      - mu : deterministic part & the drift of the process, mean-reversion rate
 #      - sigma : control the random process 
+#      - θ : long-term mean, θ ∈ R
 #      - If sigma is large enough, then mu become unsignificant for the process
 
 @dataclass
